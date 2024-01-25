@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Dexterity API provides access to various financial data related to trading. This API is designed for retrieving fills, mark prices, and settlement data, as well as checking the health of the service.
+This API is designed for retrieving fills, mark prices, and settlement data for the Dexterity Protocol, as well as checking the health of the service.
 
 Base URL: `https://dexterity.hxro.com/`
 
