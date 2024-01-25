@@ -20,27 +20,29 @@ Base URL: `https://dexterity.hxro.com/`
   - `after`: (optional) Timestamp to retrieve fills after this time.
 - **Example output**:
   ```json
-  [
-    {
-      "base_size": 0.1, 
-      "block_timestamp": "Tue, 23 Jan 2024 20:03:34 GMT", 
-      "inserted_at": "Tue, 23 Jan 2024 20:03:36 GMT", 
-      "maker_client_order_id": 0, 
-      "maker_order_id": "3100752596320763380398529587648057", 
-      "maker_order_nonce": "26016602", 
-      "maker_trg": "DzbH4iBeSSFFSdEAhMwvcY7FjWMkBa4XYzTdoGEETj7m", 
-      "mpg": "4cKB5xKtDpv4xo6ZxyiEvtyX3HgXzyJUS1Y8hAfoNkMT", 
-      "price": 39137.0, 
-      "product": "BTCUSD-PERP", 
-      "quote_size": 3913.7, 
-      "slot": 243670447, 
-      "taker_client_order_id": 0, 
-      "taker_order_nonce": "26016639", 
-      "taker_side": "bid", 
-      "taker_trg": "BYxWxkfP3A8W2UqeR6b1UbvG9SgHuah2fz3LwVV5zrSW", 
-      "tx_sig": "3sYZJJ4Fi91LLrKyphLDydAnxGTXHE3DjZdd93ieySnxkuyaqEZsynVB8wPL881y5wbZJagmHBoMKXzD3UB77aPK"
-    }
-  ]
+  {
+    "fills": [
+      {
+        "base_size": 0.1, 
+        "block_timestamp": "Tue, 23 Jan 2024 20:03:34 GMT", 
+        "inserted_at": "Tue, 23 Jan 2024 20:03:36 GMT", 
+        "maker_client_order_id": 0, 
+        "maker_order_id": "3100752596320763380398529587648057", 
+        "maker_order_nonce": "26016602", 
+        "maker_trg": "DzbH4iBeSSFFSdEAhMwvcY7FjWMkBa4XYzTdoGEETj7m", 
+        "mpg": "4cKB5xKtDpv4xo6ZxyiEvtyX3HgXzyJUS1Y8hAfoNkMT", 
+        "price": 39137.0, 
+        "product": "BTCUSD-PERP", 
+        "quote_size": 3913.7, 
+        "slot": 243670447, 
+        "taker_client_order_id": 0, 
+        "taker_order_nonce": "26016639", 
+        "taker_side": "bid", 
+        "taker_trg": "BYxWxkfP3A8W2UqeR6b1UbvG9SgHuah2fz3LwVV5zrSW", 
+        "tx_sig": "3sYZJJ4Fi91LLrKyphLDydAnxGTXHE3DjZdd93ieySnxkuyaqEZsynVB8wPL881y5wbZJagmHBoMKXzD3UB77aPK"
+      }
+    ]
+  }
   ```
 
 ### 2. List Mark Prices (`/mark_prices`)
