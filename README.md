@@ -54,6 +54,22 @@ Base URL: `https://dexterity.hxro.com/`
   - `limit`: (optional) Maximum number of prices to return (default 50, max 1000).
   - `before`: (optional) Timestamp to retrieve prices before this time.
   - `after`: (optional) Timestamp to retrieve prices after this time.
+- **Example output**:
+  ```json
+    {
+      "mark_prices": [
+        {
+          "block_timestamp": "Thu, 25 Jan 2024 19:46:41 GMT", 
+          "inserted_at": "Thu, 25 Jan 2024 19:46:43 GMT", 
+          "mark_price": 39893.523645, 
+          "mpg": "4cKB5xKtDpv4xo6ZxyiEvtyX3HgXzyJUS1Y8hAfoNkMT", 
+          "product": "BTCUSD-PERP", 
+          "slot": 244083906, 
+          "tx_sig": "FLqgDnqcurLxVf8SCg63vKGcFDHUTFm1eyEPzKMeXsEEAVjYCUsjkzGkcSvyqUt3Xn4HQAZT6vh8hpqqdqHbgdG"
+        }
+     ]
+   }
+  ```
 
 ### 3. List Settlements (`/settlements`)
 
