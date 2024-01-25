@@ -80,11 +80,37 @@ Base URL: `https://dexterity.hxro.com/`
   - `limit`: (optional) Maximum number of settlements to return (default 50, max 1000).
   - `before`: (optional) Timestamp to retrieve settlements before this time.
   - `after`: (optional) Timestamp to retrieve settlements after this time.
+- **Example output**:
+  ```json
+  {
+    "settlements": [
+      {
+        "block_timestamp": "Thu, 25 Jan 2024 19:37:30 GMT", 
+        "elapsed": 3622.0, 
+        "full_period": 86400.0, 
+        "index_price": 39832.647, 
+        "inserted_at": "Thu, 25 Jan 2024 19:37:31 GMT", 
+        "mark_price": 39924.5, 
+        "mpg": "4cKB5xKtDpv4xo6ZxyiEvtyX3HgXzyJUS1Y8hAfoNkMT", 
+        "product": "BTCUSD-PERP", 
+        "result": -3.67412, 
+        "slot": 244082564, 
+        "tx_sig": "39p78ZWtAoRmsVsjfM3mwcjp8a4vQ7sxKXj5xA8HWioDnQUJurYmJechcCKmFEtu4xcsyLhfVZ6WJn4qDmJhTVgC"
+      }
+    ]
+  }
+  ```
 
 ### 4. Health Check (`/health`)
 
 - **Description**: Check the health of the API service.
 - **Method**: GET
+- **Example output**:
+  ```json
+  {
+    "response": "OK"
+  }
+  ```
 
 ## Examples
 
