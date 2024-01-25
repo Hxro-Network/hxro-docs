@@ -39,8 +39,7 @@ Base URL: `https://dexterity.hxro.com/`
       "taker_side": "bid", 
       "taker_trg": "BYxWxkfP3A8W2UqeR6b1UbvG9SgHuah2fz3LwVV5zrSW", 
       "tx_sig": "3sYZJJ4Fi91LLrKyphLDydAnxGTXHE3DjZdd93ieySnxkuyaqEZsynVB8wPL881y5wbZJagmHBoMKXzD3UB77aPK"
-    },
-    ...
+    }
   ]
   ```
 
