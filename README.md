@@ -112,7 +112,73 @@ Base URL: `https://dexterity.hxro.com/`
   }
   ```
 
+### 5. Calculate Margin Levels (`/margin_levels`)
+
+- **Description**: Calculates and returns the margin levels for groups of products based on their correlation and the provided positions & product data.
+- **Method**: POST
+- **Request Body**:
+  - JSON object containing an array of positions per MPG:
+    - `mpg`: The name of the Market Product Group.
+    - `positions`: An array of position objects, where each object includes:
+      - `product`: Product name.
+      - `position_weight`: USD notional value of the position.
+      - `product_std`: The % standard deviation of the product's price (STD/MARK_PRICE).
+- **Example Output**:
+  ```json
+  [
+    [
+      "STAKECHIP",
+      [
+        {
+          "initial_margin": 16.0,
+          "maintenance_margin": 8.0,
+          "products": [
+            "SOLUSD-PERP",
+            "MSOLUSD-PERP",
+            "JSOLUSD-PERP"
+          ]
+        },
+        {
+          "initial_margin": 30.14,
+          "maintenance_margin": 15.07,
+          "products": [
+            "BTCUSD-PERP"
+          ]
+        }
+      ]
+    ],
+  ]
+  ```
+
 ## Examples
+
+### Curl Examples
+
+#### Fetching for Positions Margin Levels
+
+```bash
+  curl -X POST https://dexterity.hxro.com/margin_levels \
+  -H "Content-Type: application/json" \
+  -d '[
+      {
+          "mpg": "STAKECHIP",
+          "positions": [
+              {"product": "SOLUSD-PERP", "position_weight": -48, "product_std": 0.051},
+              {"product": "MSOLUSD-PERP", "position_weight": 111.96, "product_std": 0.05},
+              {"product": "BTCUSD-PERP", "position_weight": 200.96, "product_std": 0.05},
+              {"product": "JSOLUSD-PERP", "position_weight": 40.96, "product_std": 0.05}
+          ]
+      },
+      {
+          "mpg": "BLUECHIP",
+          "positions": [
+              {"product": "SOLUSD-PERP", "position_weight": -200, "product_std": 0.05},
+              {"product": "ETHUSD-PERP", "position_weight": 50.96, "product_std": 0.06},
+              {"product": "BTCUSD-PERP", "position_weight": 200.96, "product_std": 0.02}
+          ]
+      }
+  ]'
+  ```
 
 ### JavaScript Examples
 
