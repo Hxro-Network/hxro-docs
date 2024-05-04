@@ -1,6 +1,6 @@
 # Running a Parimutuel Crank
 
-This document outlines the steps to run a parimutuel crank using the Docker image provided and configuration through environment variables.
+This document outlines the steps to run a parimutuel crank.
 
 ## Prerequisites
 
